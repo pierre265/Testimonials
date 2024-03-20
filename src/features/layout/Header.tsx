@@ -10,7 +10,7 @@ export const Header = async () =>{
         <Layout className="flex items-center gap-4 ">
             <div className="flex-1">
             <Image 
-                src="" width={32} 
+                src="/icon (1).png" width={32} 
                 height = {32}
                 alt="Icone page"/>
             <LoggedInButton />

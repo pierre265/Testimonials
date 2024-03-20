@@ -1,4 +1,6 @@
-import {signIn} from "@/auth/auth";
+"use client"
+
+import {signInAction} from "./auth.action";
 import {Button} from "@/components/ui/button";
 import {LogIn} from "lucide-react";
 
@@ -10,9 +12,9 @@ export const SignInButton = () =>{
             <Button
             variant="secondary" size="sm"
             type="submit"
-                formAction={async () =>{
+                onClick={async () =>{
                     "use server";
-                    await signIn();
+                    await signInAction();
                 }}
             >
                 <LogIn size={16} className="mr-2" /> 

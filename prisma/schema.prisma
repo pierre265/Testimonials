@@ -71,11 +71,13 @@ enum Plan{
 model Product{
   id        String   @id @default(cuid())
   name      String
+  slug      String @unique
   noteText     String?
   informationRext     String?
   reviewText     String?
   thanksText     String?
   backgroundColor     String?
+  enabled       Boolean  @default(true)
 
   user      User     @relation(fields: [userId] , references: [id],  onDelete: Cascade) 
   userId String
